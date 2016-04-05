@@ -10,15 +10,16 @@ import formatTime from 'minutes-seconds-milliseconds';
 var StopWatch = React.createClass({
   getInitialState() {
     return {
-      timeElapsed: null
+      timeElapsed: null,
+      running: false
     }
   },
   render() {
     return <View style={ styles.container }>
       <View style={ [styles.header, this.border('yellow')] }>
         <View style= { [styles.timerWrapper, this.border('red')] }>
-          <Text>
-            { formatTime(this.state.timeElapsed) }
+          <Text style={ styles.timer }>
+            {formatTime(this.state.timeElapsed)}
           </Text>
         </View>
         <View style={ [styles.buttonWrapper, this.border('green')] }>
@@ -35,32 +36,42 @@ var StopWatch = React.createClass({
   startStopButton() {
     return <TouchableHighlight
       underlayColor="gray"
-      onPress={ this.handleStartPress }>
-      <Text>Start</Text>
+      onPress={ this.handleStartPress }
+      style={ [styles.button, styles.startButton] }>
+      <Text>{ this.state.running ? 'Stop' : 'Start' }</Text>
     </TouchableHighlight>
   },
   lapButton() {
     return <TouchableHighlight
       underlayColor="gray"
-      onPress={ this.handleLapPressed } >
+      onPress={ this.handleLapPressed }
+      style={ styles.button }>
       <Text>Lap</Text>
     </TouchableHighlight>
   },
   handleStartPress() {
+    if (this.state.running) {
+      clearInterval(this.interval);
+      this.setState({ running: false });
+      return;
+    }
+
     var startTime = new Date();
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState({
-        timeElapsed: new Date() - startTime
+        timeElapsed: new Date() - startTime,
+        running: true
       });
     }, 30);
+
   },
   handleLapPressed() {
 
   },
   border(color) {
     return {
-      borderColor: color,
-      borderWidth: 4
+      // borderColor: color,
+      // borderWidth: 4
     }
   }
 });
@@ -86,6 +97,20 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
+  },
+  timer: {
+    fontSize: 60
+  },
+  button: {
+    borderWidth: 2,
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  startButton: {
+    borderColor: '#00CC00'
   }
 });
 
