@@ -10,7 +10,7 @@
 
 //[...]
 
-import React, { AppRegistry, Text, View, StyleSheet } from 'react-native';
+import React, { AppRegistry, View, StyleSheet } from 'react-native';
 import DayItem from './src/day-item';
 import Moment from 'moment';
 

@@ -1,5 +1,7 @@
-var React = require('react-native');
-var Text = React.Text;
+// var React = require('react-native');
+// var Text = React.Text;
+
+import React, { Text } from 'react-native';
 
 var DayItem = React.createClass({
   render() {
