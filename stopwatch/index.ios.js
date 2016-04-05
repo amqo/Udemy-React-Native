@@ -5,14 +5,20 @@
 // } = React;
 
 import React, { Text, View, TouchableHighlight, AppRegistry, StyleSheet } from 'react-native';
+import formatTime from 'minutes-seconds-milliseconds';
 
 var StopWatch = React.createClass({
+  getInitialState() {
+    return {
+      timeElapsed: null
+    }
+  },
   render() {
     return <View style={ styles.container }>
       <View style={ [styles.header, this.border('yellow')] }>
         <View style= { [styles.timerWrapper, this.border('red')] }>
           <Text>
-            00:00.00
+            { formatTime(this.state.timeElapsed) }
           </Text>
         </View>
         <View style={ [styles.buttonWrapper, this.border('green')] }>
@@ -41,10 +47,15 @@ var StopWatch = React.createClass({
     </TouchableHighlight>
   },
   handleStartPress() {
-    console.log('Start was pressed');
+    var startTime = new Date();
+    setInterval(() => {
+      this.setState({
+        timeElapsed: new Date() - startTime
+      });
+    }, 30);
   },
   handleLapPressed() {
-    console.log('Lap was pressed');
+
   },
   border(color) {
     return {
