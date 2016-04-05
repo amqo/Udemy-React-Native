@@ -1,52 +1,54 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
+//javascript ES2015
+// var React = require('react-native');
+// var {
+//   Text, View, AppRegistry
+// } = React;
 
-import React, {
-  AppRegistry,
-  Component,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { Text, View, AppRegistry, StyleSheet } from 'react-native';
 
-class stopwatch extends Component {
+var StopWatch = React.createClass({
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+    return <View style= { styles.container }>
+      <View>
+        <View>
+          <Text>
+            00:00.00
+          </Text>
+        </View>
+        <View>
+          { this.startStopButton() }
+          { this.lapButton() }
+        </View>
       </View>
-    );
-  }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+      <View>
+        <Text>I am a list of laps</Text>
+      </View>
+    </View>
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  startStopButton() {
+    return <View>
+      <Text>Start</Text>
+    </View>
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  lapButton() {
+    return <View>
+      <Text>Lap</Text>
+    </View>
+  }
 });
 
-AppRegistry.registerComponent('stopwatch', () => stopwatch);
+var styles = StyleSheet.create({
+  container:  {
+    flex: 1,
+    alignItems: 'stretch'
+  },
+  header: {
+    flex: 1
+  },
+  footer: {
+    flex: 1
+  }
+});
+
+AppRegistry.registerComponent('stopwatch', () => StopWatch);
