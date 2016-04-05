@@ -8,20 +8,20 @@ import React, { Text, View, AppRegistry, StyleSheet } from 'react-native';
 
 var StopWatch = React.createClass({
   render() {
-    return <View style= { styles.container }>
-      <View>
+    return <View style={ styles.container }>
+      <View style={ [styles.header, this.border('yellow')] }>
         <View>
-          <Text>
+          <Text style={ this.border('red') }>
             00:00.00
           </Text>
         </View>
-        <View>
+        <View style={ this.border('green') }>
           { this.startStopButton() }
           { this.lapButton() }
         </View>
       </View>
 
-      <View>
+      <View style={ [styles.footer, this.border('blue')] }>
         <Text>I am a list of laps</Text>
       </View>
     </View>
@@ -35,6 +35,12 @@ var StopWatch = React.createClass({
     return <View>
       <Text>Lap</Text>
     </View>
+  },
+  border(color) {
+    return {
+      borderColor: color,
+      borderWidth: 4
+    }
   }
 });
 
