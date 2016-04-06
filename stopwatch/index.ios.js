@@ -11,7 +11,9 @@ var StopWatch = React.createClass({
   getInitialState() {
     return {
       timeElapsed: null,
-      running: false
+      running: false,
+      startTime: null,
+      laps: []
     }
   },
   render() {
@@ -29,9 +31,19 @@ var StopWatch = React.createClass({
       </View>
 
       <View style={ [styles.footer, this.border('blue')] }>
-        <Text>I am a list of laps</Text>
+        { this.laps() }
       </View>
     </View>
+  },
+  laps() {
+    return this.state.laps.map((time, index) => {
+        return (
+          <View key={ index } style={ styles.lap }>
+            <Text style={ styles.lapText }>Lap #{ index + 1 }</Text>
+            <Text style={ styles.lapText }>{ formatTime(time) }</Text>
+          </View>
+        );
+      });
   },
   startStopButton() {
     var style = this.state.running ? styles.stopButton : styles.startButton;
@@ -48,7 +60,7 @@ var StopWatch = React.createClass({
   lapButton() {
     return <TouchableHighlight
       underlayColor="gray"
-      onPress={ this.handleLapPressed }
+      onPress={ this.handleLapPress }
       style={ styles.button }>
       <Text>Lap</Text>
     </TouchableHighlight>
@@ -60,17 +72,23 @@ var StopWatch = React.createClass({
       return;
     }
 
-    var startTime = new Date();
+    this.setState({ startTime: new Date() });
+
     this.interval = setInterval(() => {
       this.setState({
-        timeElapsed: new Date() - startTime,
+        timeElapsed: new Date() - this.state.startTime,
         running: true
       });
     }, 30);
 
   },
-  handleLapPressed() {
+  handleLapPress() {
+    var lap = this.state.timeElapsed;
 
+    this.setState({
+      startTime: new Date(),
+      laps: [lap, ...this.state.laps]
+    });
   },
   border(color) {
     return {
@@ -118,6 +136,14 @@ var styles = StyleSheet.create({
   },
   stopButton: {
     borderColor: '#CC0000'
+  },
+  lap: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    margin: 5
+  },
+  lapText: {
+    fontSize: 30
   }
 });
 
