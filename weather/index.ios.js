@@ -7,6 +7,8 @@ import React, {
   View
 } from 'react-native';
 
+import Api from './src/api';
+
 class Weather extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,10 @@ class Weather extends Component {
       pin: {
         latitude: 0,
         longitude: 0
-      }
+      },
+      city: '',
+      temperature: '',
+      description: ''
     };
   }
   render() {
@@ -34,6 +39,12 @@ class Weather extends Component {
         longitude: region.longitude
       }
     });
+
+    Api(region.latitude, region.longitude)
+      .then((data) => {
+        this.setState(data)
+        console.log(data);
+      });
   }
 }
 
