@@ -8,10 +8,32 @@ import React, {
 } from 'react-native';
 
 class Weather extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pin: {
+        latitude: 0,
+        longitude: 0
+      }
+    };
+  }
   render() {
     return (
-      <MapView style={ styles.map }></MapView>
+      <MapView
+        annotations={ [this.state.pin] }
+        style={ styles.map }
+        onRegionChangeComplete={
+          this.onRegionChangeComplete.bind(this) } >
+      </MapView>
     );
+  }
+  onRegionChangeComplete(region) {
+    this.setState({
+      pin: {
+        latitude: region.latitude,
+        longitude: region.longitude
+      }
+    });
   }
 }
 
