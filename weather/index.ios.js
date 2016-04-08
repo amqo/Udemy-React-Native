@@ -40,31 +40,14 @@ class Weather extends Component {
     );
   }
   render() {
-    if (this.state.region) {
-      return (
-        <View style={ styles.container }>
-          <MapView
-            region={ this.state.region }
-            annotations={ [this.state.pin] }
-            style={ styles.map }
-            onRegionChange={ this.onRegionChange.bind(this) }
-            onRegionChangeComplete={ this.onRegionChangeComplete.bind(this) } />
-          <View style={ styles.textWrapper }>
-            <Text style={ styles.text } >{ this.state.city }</Text>
-            <Text style={ styles.text } >{ this.state.temperature }</Text>
-            <Text style={ styles.text } >{ this.state.description }</Text>
-          </View>
-        </View>
-      );
-    }
     return (
       <View style={ styles.container }>
         <MapView
+          region={ this.state.region }
           annotations={ [this.state.pin] }
           style={ styles.map }
           onRegionChange={ this.onRegionChange.bind(this) }
-          onRegionChangeComplete={ this.onRegionChangeComplete.bind(this) } >
-        </MapView>
+          onRegionChangeComplete={ this.onRegionChangeComplete.bind(this) } />
         <View style={ styles.textWrapper }>
           <Text style={ styles.text } >{ this.state.city }</Text>
           <Text style={ styles.text } >{ this.state.temperature }</Text>
