@@ -1,3 +1,4 @@
+import _ from 'lodash';
 
 var rootUrl = 'http://api.openweathermap.org/data/2.5/weather?APPID=f3372a01184a640f574219c51aa346e1';
 
@@ -6,7 +7,7 @@ var kelvinToC = function(kelvin) {
 }
 
 module.exports = function(latitude, longitude) {
-  var url = `${rootUrl}&lat=${latitude}&lon=${longitude}`;
+  var url = `${rootUrl}&lat=${latitude}&lon=${longitude}&lang=es`;
 
   return fetch(url)
     .then(response => {
@@ -15,7 +16,7 @@ module.exports = function(latitude, longitude) {
       return {
         city: json.name,
         temperature: kelvinToC(json.main.temp),
-        description: json.weather[0].description
+        description: _.capitalize(json.weather[0].description)
       }
     });
 }

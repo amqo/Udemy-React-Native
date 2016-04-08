@@ -4,7 +4,8 @@ import React, {
   AppRegistry,
   Component,
   StyleSheet,
-  View
+  View,
+  Text
 } from 'react-native';
 
 import Api from './src/api';
@@ -24,12 +25,19 @@ class Weather extends Component {
   }
   render() {
     return (
-      <MapView
-        annotations={ [this.state.pin] }
-        style={ styles.map }
-        onRegionChangeComplete={
-          this.onRegionChangeComplete.bind(this) } >
-      </MapView>
+      <View style={ styles.container }>
+        <MapView
+          annotations={ [this.state.pin] }
+          style={ styles.map }
+          onRegionChangeComplete={
+            this.onRegionChangeComplete.bind(this) } >
+        </MapView>
+        <View style={ styles.textWrapper }>
+          <Text style={ styles.text } >{ this.state.city }</Text>
+          <Text style={ styles.text } >{ this.state.temperature }</Text>
+          <Text style={ styles.text } >{ this.state.description }</Text>
+        </View>
+      </View>
     );
   }
   onRegionChangeComplete(region) {
@@ -43,14 +51,27 @@ class Weather extends Component {
     Api(region.latitude, region.longitude)
       .then((data) => {
         this.setState(data)
-        console.log(data);
       });
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    backgroundColor: '#F5FCFF'
+  },
   map: {
-    flex: 1
+    flex: 2,
+    marginTop: 30
+  },
+  textWrapper: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  text: {
+    fontSize: 30
   }
 });
 
