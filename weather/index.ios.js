@@ -11,8 +11,11 @@ import React, {
 import Api from './src/api';
 
 class Weather extends Component {
+
   constructor(props) {
     super(props);
+
+    this.watchID = null;
 
     this.state = {
       pin: {
@@ -34,10 +37,24 @@ class Weather extends Component {
             longitude: position.coords.longitude
           }
         });
-      },
-      (error) => alert(error.message),
+      }, (error) => alert(error.message),
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
     );
+
+    this.watchID = navigator.geolocation.watchPosition(
+      (position) => {
+        this.setState({
+          region: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          }
+        });
+      }, (error) => alert(error.message),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+    );
+  }
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.watchID);
   }
   render() {
     return (
