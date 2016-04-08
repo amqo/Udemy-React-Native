@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-ws/2.5.0/e9753b7dcae5deca92e871c5c759067070b07bc/okhttp-ws-2.5.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="0e9753b7dcae5deca92e871c5c759067070b07bc">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-ws-2.5.0_c69c5a510ef564a3f0fa27b29ef0fe2c2416c3c0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.0.1_909a92f1b40ac464b41bcb190208d289421b196e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/commons-cli-1.2_7f6b525ed31c0caec11fdd97011574ac55e4997d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.8.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4af24c040b21980e0a80a505816c648e36705bd9">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.fresco-fbcore-0.8.1_572c5880d76f7064cb0d3fcce39607111e65fcd6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsr305-3.0.0_e7461080671e246beb3d592015e681293a465860/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.23.1/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="60e1da2c40a60ff372052eba4278e0cb252a3f3a">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/infer-annotations-1.5_2bdbf393f59b5ac740a70ad7e1d4880ffb135ce9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho-okhttp/1.2.0/6c5c9380e245c4ff5be2b2a49dcbb0200c39798e/stetho-okhttp-1.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="6c5c9380e245c4ff5be2b2a49dcbb0200c39798e">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/stetho-okhttp-1.2.0_13022755d549476c9e7c57127f835841e483af43/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.23.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="02f58fb4e333f5f258eedc4d1bc66032059aaf70">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.react-react-native-0.23.1_2f3d08045d14aaf25304bd97e37030ca6cd7491c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.8.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="9178570a3a28c95fabd3bc746cd68efe99ad2b47">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.fresco-fresco-0.8.1_1b99d07d23f5a8b9aa7c76b078ba71bb49eb832c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-2.5.0_64eb7565a0a19cc5e325e2edf7653b7f859df15f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.0.1_ae1805bc3040d8d482c5dba6134fcbeee4c8927f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-android-1.1.4_d91e4f727ef2b5db8930da3e2bafb828362a1242/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.2.0/1d6cdb8ce8185b8b23213fad48a83987fb6d2d67/stetho-1.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1d6cdb8ce8185b8b23213fad48a83987fb6d2d67">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/stetho-1.2.0_0bd539f3f504bd13e62a02a1be9d2c1c1186c10f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="4b552bcf9893ee5d9d2ef94a03731c17489cf4b7">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_87f5353c24e3377a5a58b0f43196810dc130b163/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e5dcc95106521508ed775057d52908e41b3908f1">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f0372389c0a1bdec312d77c482d9a37d321acafd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.2.3_735a9f03c2782b93766dfa68ca33800948018070/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp/0.8.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="0d5d69b03cb7d68b81543f6483ed04ccb0e2235b">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.fresco-imagepipeline-okhttp-0.8.1_b2c0796eca3a803e861b494f5ffe4819486d3cec/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-2.4.0_93e2fe97a60dbbf009c4fa84f23651778682302b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.8.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3836ecca4e31e18ea8fbae8e822d49777b0db4f7">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.fresco-imagepipeline-0.8.1_adc0c81c7a7da77d2cb815f1c0f9f694cd2dd892/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_8d14cd14e89cd4a626b883a9992c2fe193cc3846/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.8.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="845a5b3a624946b2068963ba656c117fc453701c">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.fresco-drawee-0.8.1_14b7bc6454773446934b14b4978c72a6c9b4df3a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_7327e63820dcef5307e4c5152e6132c214b3a666/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.0.1_0976621890d5badac02160192ad6079b2350f4c7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/alberto/Desarrollo/android-sdks/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/alberto/Desarrollo/Udemy/ReactNativeWorkspace/authentication/android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.0.1_2282d8e2df26b3330354d7e4b82a70cca3cd2141/classes.dex" />
+    </item>
+
+</items>
