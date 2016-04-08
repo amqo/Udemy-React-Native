@@ -29,8 +29,8 @@ class Weather extends Component {
         <MapView
           annotations={ [this.state.pin] }
           style={ styles.map }
-          onRegionChangeComplete={
-            this.onRegionChangeComplete.bind(this) } >
+          onRegionChange={ this.onRegionChange.bind(this) }
+          onRegionChangeComplete={ this.onRegionChangeComplete.bind(this) } >
         </MapView>
         <View style={ styles.textWrapper }>
           <Text style={ styles.text } >{ this.state.city }</Text>
@@ -40,14 +40,15 @@ class Weather extends Component {
       </View>
     );
   }
-  onRegionChangeComplete(region) {
+  onRegionChange(region) {
     this.setState({
       pin: {
         latitude: region.latitude,
         longitude: region.longitude
       }
     });
-
+  }
+  onRegionChangeComplete(region) {
     Api(region.latitude, region.longitude)
       .then((data) => {
         this.setState(data)
