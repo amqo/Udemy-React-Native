@@ -1,5 +1,6 @@
 import React, { Component, View, Text, StyleSheet, TextInput } from 'react-native';
 import Button from '../common/button';
+import Parse from 'parse/react-native';
 
 class Signin extends Component {
   constructor(props) {
@@ -20,15 +21,14 @@ class Signin extends Component {
             this.setState({ username: text })
           } }
           value={ this.state.username }
-          style={ styles.input }></TextInput>
+          style={ styles.input } />
 
         <Text style={ styles.label }>Password:</Text>
         <TextInput
           secureTextEntry={ true }
           style={ styles.input }
           onChangeText={ (text) => this.setState({ password: text }) }
-          value={ this.state.password }
-          ></TextInput>
+          value={ this.state.password } />
 
         <Button text='Sign In' onPress={ this.handleSignIn.bind(this) } />
       </View>
@@ -36,7 +36,10 @@ class Signin extends Component {
   }
 
   handleSignIn() {
-    console.log('Sign In button press');
+    Parse.User.logIn(this.state.username, this.state.password, {
+      success: (user) => { console.log(user); },
+      error: (data, error) => { console.log(data, error); }
+    });
   }
 }
 
