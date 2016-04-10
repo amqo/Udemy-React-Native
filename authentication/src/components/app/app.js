@@ -29,7 +29,7 @@ class App extends Component {
     }
     return (
       <View style={ styles.container }>
-        <Text>Welcome back! { this.state.user.get('username') } </Text>
+        <Text>Welcome back, { this.state.user.get('username') }! </Text>
         <Button text='Log out' onPress={ this.handleLogOut.bind(this) } />
       </View>
     );

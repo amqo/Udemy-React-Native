@@ -16,6 +16,7 @@ class Main extends Component {
     Parse.initialize('ReactAuthentication', 'belandres');
     Parse.serverURL = 'https://amqo-react-authentication.herokuapp.com/parse';
   }
+
   render() {
     return (
       <Navigator
@@ -27,6 +28,7 @@ class Main extends Component {
         }} />
     );
   }
+
   renderScene(route, navigator) {
     var Component = ROUTES[route.name]; // ROUTES['signin'] => Signin
     return <Component route={ route } navigator={ navigator } />
