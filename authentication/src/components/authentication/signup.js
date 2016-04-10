@@ -1,5 +1,7 @@
 import React, { Component, Text, View, StyleSheet, TextInput } from 'react-native';
 import Button from '../common/button';
+import Parse from 'parse/react-native';
+import _ from 'lodash';
 
 class Signup extends Component {
   constructor(props) {
@@ -38,15 +40,48 @@ class Signup extends Component {
           onChangeText={ (text) => this.setState({ confirmPassword: text }) }
           value={ this.state.confirmPassword } />
 
-        <Text style={ styles.label }>{ this.state.errorMessage }</Text>
+        <Text style={ [styles.label, styles.errorLabel] }>{ this.state.errorMessage }</Text>
 
         <Button text='Sign Up' onPress={ this.handleSignUp.bind(this) } />
-        <Button text='Cancel' onPress={ this.handleCancel.bind(this) } />
+        <Button text='I have an account' onPress={ this.handleCancel.bind(this) } />
       </View>
     );
   }
   handleSignUp() {
+    if (this.state.username === '') {
+      return this.setState({
+        errorMessage: 'Enter a Username'
+      });
+    } else if (this.state.password === '') {
+      return this.setState({
+        errorMessage: 'Enter a Password'
+      });
+    } else if (this.state.password !== this.state.confirmPassword) {
+      return this.setState({
+        errorMessage: 'Your passwords do not match'
+      });
+    }
 
+    var user = new Parse.User();
+    user.set('username', this.state.username);
+    user.set('password', this.state.password);
+    user.signUp(null, {
+      success: (user) => {
+        console.log(user);
+        this.props.navigator.immediatelyResetRouteStack([{
+          name: 'app',
+          username: this.state.username
+        }]);
+      },
+      error: (user, error) => {
+        console.log(user, error);
+        this.setState({
+          password: '',
+          confirmPassword: '',
+          errorMessage: _.capitalize(error.message)
+        });
+      }
+    });
   }
   handleCancel() {
     this.props.navigator.pop();
@@ -72,6 +107,9 @@ var styles = StyleSheet.create({
   },
   label: {
     fontSize: 18
+  },
+  errorLabel: {
+    color: 'red'
   }
 });
 

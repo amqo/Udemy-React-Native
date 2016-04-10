@@ -3,15 +3,17 @@ import React, { Navigator, StyleSheet, Component } from 'react-native';
 import Parse from 'parse/react-native';
 import Signin from './components/authentication/signin';
 import Signup from './components/authentication/signup';
+import App from './components/app/app';
 
 var ROUTES = {
   signin: Signin,
-  signup: Signup
+  signup: Signup,
+  app: App
 };
 
 class Main extends Component {
   componentWillMount() {
-    Parse.initialize('myAppId','unused');
+    Parse.initialize('ReactAuthentication', 'belandres');
     Parse.serverURL = 'https://amqo-react-authentication.herokuapp.com/parse';
   }
   render() {
