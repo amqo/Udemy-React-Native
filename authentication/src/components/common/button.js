@@ -4,9 +4,9 @@ class Button extends Component {
   render() {
     return (
       <TouchableHighlight
-      style={ styles.button }
-      underlayColor={ 'gray' }
-      onPress={ this.props.onPress } >
+        style={ styles.button }
+        underlayColor={ 'gray' }
+        onPress={ this.props.onPress } >
         <Text style={ styles.buttonText }>{ this.props.text }</Text>
       </TouchableHighlight>
     );
