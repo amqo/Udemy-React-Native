@@ -1,27 +1,26 @@
-import React, { Component, View, Text, StyleSheet, TextInput } from 'react-native';
+import React, { Component, Text, View, StyleSheet, TextInput } from 'react-native';
 import Button from '../common/button';
-import Parse from 'parse/react-native';
-import _ from 'lodash';
 
-class Signin extends Component {
+class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
       password: '',
+      confirmPassword: '',
       errorMessage: ''
     }
   }
   render() {
     return (
       <View style={ styles.container }>
-        <Text>Sign In</Text>
+        <Text>Sign Up</Text>
 
         <Text style={ styles.label }>Username:</Text>
         <TextInput
-          onChangeText={ (text) => {
+          onChangeText={(text) => {
             this.setState({ username: text })
-          } }
+          }}
           value={ this.state.username }
           style={ styles.input } />
 
@@ -31,34 +30,26 @@ class Signin extends Component {
           style={ styles.input }
           onChangeText={ (text) => this.setState({ password: text }) }
           value={ this.state.password } />
+
+        <Text style={ styles.label }>Confirm Password:</Text>
+        <TextInput
+          secureTextEntry={ true }
+          style={ styles.input }
+          onChangeText={ (text) => this.setState({ confirmPassword: text }) }
+          value={ this.state.confirmPassword } />
+
         <Text style={ styles.label }>{ this.state.errorMessage }</Text>
-        <Button text='Sign In' onPress={ this.handleSignIn.bind(this) } />
-        <Button text='I need an account' onPress={ this.handleSignUp.bind(this) } />
+
+        <Button text='Sign Up' onPress={ this.handleSignUp.bind(this) } />
+        <Button text='Cancel' onPress={ this.handleCancel.bind(this) } />
       </View>
     );
   }
-
   handleSignUp() {
-    this.props.navigator.push({ name: 'signup' });
-  }
 
-  handleSignIn() {
-    Parse.User.logIn(this.state.username, this.state.password, {
-      success: (user) => {
-        console.log(user);
-        this.setState({
-          password: '',
-          errorMessage: ''
-        });
-      },
-      error: (data, error) => {
-        console.log(data, error);
-        this.setState({
-          password: '',
-          errorMessage: _.capitalize(error.message)
-        });
-      }
-    });
+  }
+  handleCancel() {
+    this.props.navigator.pop();
   }
 }
 
@@ -66,7 +57,8 @@ var styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white'
   },
   input: {
       padding: 4,
@@ -83,4 +75,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = Signin;
+module.exports = Signup;

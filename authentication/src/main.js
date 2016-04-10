@@ -2,9 +2,11 @@ import React, { Navigator, StyleSheet, Component } from 'react-native';
 
 import Parse from 'parse/react-native';
 import Signin from './components/authentication/signin';
+import Signup from './components/authentication/signup';
 
 var ROUTES = {
-  signin: Signin
+  signin: Signin,
+  signup: Signup
 };
 
 class Main extends Component {
@@ -17,15 +19,15 @@ class Main extends Component {
       <Navigator
         style={ styles.container }
         initialRoute={{ name: 'signin' }}
-        renderScene={ this.renderScene.bind(this) }
+        renderScene={ this.renderScene }
         configureScene={() => {
-          return Navigator.SceneConfigs.FloatRight;
+          return Navigator.SceneConfigs.FloatFromRight;
         }} />
     );
   }
   renderScene(route, navigator) {
     var Component = ROUTES[route.name]; // ROUTES['signin'] => Signin
-    return <Component />
+    return <Component route={ route } navigator={ navigator } />
   }
 }
 
